@@ -1,0 +1,30 @@
+[user]
+	email = m@michaelcullum.com
+	name = MichaelC
+	signingkey = 2576AC4AB0313154
+[core]
+	excludesfile = /Users/michaelcullum/.gitignore_global
+	autocrlf = false
+	eol = lf
+[credential]
+	helper = cache --timeout=3600
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+[merge]
+        log = True
+[alias]
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit --date=relative
+[push]
+	default = matching
+[commit]
+#	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[commit]
+	gpgsign = true
+[url "git@github.com:"]
+    insteadOf = gh:

@@ -1,0 +1,22 @@
+directory=`basename "$PWD"`
+
+if [ -f "$directory.sublime-project" ];
+then
+	echo "Sublime project exists"
+	open=true
+fi
+
+if [ -f "$directory.sublime-workspace" ];
+then
+	echo "Sublime workspace exists"
+	open=true
+fi
+
+if [ $open == true ];
+then
+	subl --project "$directory.sublime-project"
+	echo "Sublime workspace opened"
+else
+	subl ./
+	echo "Sublime in current directory opened"
+fi
